@@ -1,0 +1,129 @@
+.ledger-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Poppins';
+}
+
+#ledger-table-heading{
+  margin: 1rem;
+}
+
+.ledger-table-container {
+  overflow-x: auto;
+  width: 80%;
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ledger-table th,
+.ledger-table td {
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.ledger-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.ledger-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ledger-table tr:hover {
+  background-color: #ddd;
+}
+
+.ledger-table th,
+.ledger-table td {
+  white-space: nowrap;
+}
+
+.give-sug-btn{
+  background-color: #1E8E3E;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dialog Styling */
+.p-dialog {
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.p-dialog-header {
+  background-color: #1E8E3E;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.p-dialog-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Form Styling */
+.p-dialog-content div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Labels */
+.p-dialog-content label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.p-dialog-content .p-inputtext, 
+.p-dialog-content .p-inputnumber {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease-in-out;
+}
+
+.p-dialog-content .p-inputtext:focus,
+.p-dialog-content .p-inputnumber:focus {
+  border-color: #1E8E3E;
+  outline: none;
+}
+
+/* Submit Button */
+.p-dialog-content .p-button {
+  background-color: #1E8E3E;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.p-dialog-content .p-button:hover {
+  background-color: #27723c;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .p-dialog {
+    width: 90vw !important;
+  }
+}

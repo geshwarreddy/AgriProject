@@ -1,0 +1,116 @@
+/* Container holding both form and image */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family:'Poppins'
+  }
+  
+  /* Form container aligned to the left */
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 70%;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    background-color: #F6F6F6;
+    padding : 1rem;
+  }
+
+  .signup-heading-container{
+    margin-bottom: 25px;
+  }
+  /* Flexbox for the form fields */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+  }
+
+  .signup-name-container{
+    display: flex;
+    justify-content: space-between;
+    gap : 10px;
+  }
+  .signup-password-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap : 40px;
+  }
+  /* Form input styling */
+  .form-group {
+    margin-bottom: 15px;
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  .form-group label{
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    margin-top: 5px;
+    border: 0.2px solid #ccc;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 4px gray ; */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    padding: 15px;
+    background-color: #1E8E3E;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    align-self: center;
+    width: 90%;
+    margin-top: 5%;
+    font-size: 15px;
+  }
+
+  
+  /* Image container aligned to the right */
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+
+  @media (max-width:768px){
+    .container{
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-container{
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }

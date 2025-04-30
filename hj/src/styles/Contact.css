@@ -1,0 +1,49 @@
+.contact-main{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+}
+
+.contact-left-container{
+    width: 45%;
+}
+
+.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form-group{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-group input{
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.contact-form-name-group{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.contact-form-name-group input{
+    min-width: 250px;
+}
+
+#query{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    min-width: 350px;
+    border-radius: 8px;
+}

@@ -1,0 +1,64 @@
+.ledger-form-main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+  
+  .ledger-form-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins';
+  }
+  
+  .ledger-form {
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    justify-content: center; /* Align to the start */
+    flex-wrap: wrap; /* Allow wrapping for form groups */
+    margin: 2rem;
+    width: 80%;
+    background-color: #F6F6F6;
+    padding: 3rem;
+    box-sizing: unset;
+  }
+  
+  .ledger-form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0.3em;
+    width: 100%; /* By default, each input takes full width */
+  }
+
+
+  .ledger-form-group input{
+    padding: 10px;
+    margin-top: 5px;
+    max-width: 400px;
+    border-radius: 5px;
+  }
+  
+  /* Create two columns layout for larger screens */
+  @media (min-width: 768px) {
+    .ledger-form-group {
+      width: 48%; /* Each form group takes up about half the width */
+      margin-right: 2%; /* Space between columns */
+    }
+  
+    .ledger-form-group:nth-child(2n) {
+      margin-right: 0; /* Remove margin on the second column */
+    }
+  }
+  
+  /* Ensure that form groups stack on smaller screens */
+  @media (max-width: 767px) {
+    .ledger-form-group {
+      width: 100%; /* Full width for mobile */
+    }
+  }
+  
