@@ -6,6 +6,8 @@ import "../styles/LedgerTable.css";
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 const LedgerTable = () => {
+ const api=`https://agriproject-120l.onrender.com`
+ //const api=`http://localhost:3001`
   const [ledgerData, setLedgerData] = useState([]);
   const [visible, setVisible] = useState(false);
   const [newReport, setNewReport] = useState({
@@ -30,7 +32,7 @@ const LedgerTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/ledgers");
+        const response = await fetch(`${api}/api/ledgers`);
         console.log(response);
         const data = await response.json();
         console.log(data);
@@ -68,7 +70,7 @@ const LedgerTable = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/ledgers/${selectedLedger._id}`, {
+      const response = await fetch(`${api}/api/ledgers/${selectedLedger._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

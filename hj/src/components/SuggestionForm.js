@@ -347,6 +347,8 @@ import axios from "axios";
 import "../styles/SuggestionForm.css";
 import ReportCharts from './ReportCharts';
 const SuggestionForm = () => {
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const { id } = useParams();
   const [ledger, setLedger] = useState(null);
   const [suggestion, setSuggestion] = useState("");
@@ -368,7 +370,7 @@ const SuggestionForm = () => {
   useEffect(() => {
     const fetchLedger = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/ledgers/${id}`);
+        const response = await fetch(`${api}/api/ledgers/${id}`);
         const data = await response.json();
         setLedger(data);
       } catch (error) {
@@ -428,7 +430,7 @@ const SuggestionForm = () => {
       const translated = await translateMessage(suggestion, targetLanguage);
       setTranslatedSuggestion(translated);
 
-      const response = await fetch("http://localhost:3001/api/send-suggestion", {
+      const response = await fetch(`${api}/api/send-suggestion`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

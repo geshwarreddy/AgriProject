@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 const SignUpPage = () => {
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -43,7 +45,7 @@ const SignUpPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/farmers", {
+      const response = await fetch(`${api}/api/farmers`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

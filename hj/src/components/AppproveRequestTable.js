@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useSelector,useDispatch } from "react-redux";
 const ApprovalRequests = () => {
+    //const api=`http://localhost:3001`
+    const api=`https://agriproject-120l.onrender.com`
     const [pendingUsers, setPendingUsers] = useState([]);
     const userRole = useSelector(state => state.user?.role) || localStorage.getItem("user").role;
     console.log("userRole",useSelector(state => state.user?.role));
     useEffect(() => {
         console.log("1",userRole);
         if (userRole === "admin") {
-            fetch(`http://localhost:3001/api/pending-approvals?role=${userRole}`, {
+            fetch(`${api}/api/pending-approvals?role=${userRole}`, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             })
@@ -22,7 +24,7 @@ const ApprovalRequests = () => {
 
     const handleApprove = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3001/api/admin/approve-volunteer/${id}`, {
+            const response = await fetch(`${api}/api/admin/approve-volunteer/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ role: userRole }),
@@ -37,7 +39,7 @@ const ApprovalRequests = () => {
 
     const handleReject = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3001/api/reject/${id}`, {
+            const response = await fetch(`${api}/api/reject/${id}`, {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ role: userRole }),

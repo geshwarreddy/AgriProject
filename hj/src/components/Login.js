@@ -12,6 +12,8 @@ import { settingUser } from "../redux/Silce/userSlice";
 
 
 export default function Login() {
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { user, setUser } = useContext(UserContext);
@@ -22,7 +24,7 @@ export default function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3001/api/login", {
+      const response = await fetch(`${api}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import '../styles/Ledger.css';
 
 const LedgerForm = () => {
+  const api=`https://agriproject-120l.onrender.com`
+  //const api=`http://localhost:3001`
   const [formData, setFormData] = useState({
     farmerName: "",
     pincode: "",
@@ -70,7 +72,7 @@ const LedgerForm = () => {
     if (!validateForm()) return;
   
     try {
-      const response = await fetch("http://localhost:3001/api/ledger-submit", {
+      const response = await fetch(`${api}/api/ledger-submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFormData), // Use updated form data

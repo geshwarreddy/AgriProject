@@ -108,6 +108,8 @@ import { revertUser, settingUser } from "../redux/Silce/userSlice";
 import Cookies from "js-cookie";
 import '../styles/Navbar.css';
 export default function Navbar() {
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const [isOpen, setIsOpen] = useState(false);
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
@@ -130,7 +132,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:3001/api/logout", {
+      await fetch(`${api}/api/logout`, {
         method: "POST",
         credentials: "include",
       });
