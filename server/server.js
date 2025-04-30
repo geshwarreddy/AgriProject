@@ -13,7 +13,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: 'https://agri-project-three.vercel.app/', // Allow only the frontend URL
+  credentials: true, // Allow credentials
+}));
 
 // Middleware to parse JSON and cookies
 app.use(express.json());

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector,useDispatch } from "react-redux";
 const ApprovalRequests = () => {
-    //const api=`http://localhost:3001`
-    const api=`https://agriproject-120l.onrender.com`
+    const api=`http://localhost:3001`
+    //const api=`https://agriproject-120l.onrender.com`
     const [pendingUsers, setPendingUsers] = useState([]);
     const userRole = useSelector(state => state.user?.role) || localStorage.getItem("user").role;
     console.log("userRole",useSelector(state => state.user?.role));
