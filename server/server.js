@@ -13,10 +13,23 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Enable CORS for all routes
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://agri-project-three.vercel.app'
+];
+
 app.use(cors({
-  origin: 'https://agri-project-three.vercel.app/', // Allow only the frontend URL
-  credentials: true, // Allow credentials
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
 }));
+
 
 // Middleware to parse JSON and cookies
 app.use(express.json());
