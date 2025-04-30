@@ -347,8 +347,8 @@ import axios from "axios";
 import "../styles/SuggestionForm.css";
 import ReportCharts from './ReportCharts';
 const SuggestionForm = () => {
-  const api=`http://localhost:3001`
-  //const api=`https://agriproject-120l.onrender.com`
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const { id } = useParams();
   const [ledger, setLedger] = useState(null);
   const [suggestion, setSuggestion] = useState("");

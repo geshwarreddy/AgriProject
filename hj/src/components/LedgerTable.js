@@ -6,8 +6,8 @@ import "../styles/LedgerTable.css";
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 const LedgerTable = () => {
- //const api=`https://agriproject-120l.onrender.com`
- const api=`http://localhost:3001`
+ const api=`https://agriproject-120l.onrender.com`
+ //const api=`http://localhost:3001`
   const [ledgerData, setLedgerData] = useState([]);
   const [visible, setVisible] = useState(false);
   const [newReport, setNewReport] = useState({

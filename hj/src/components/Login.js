@@ -12,8 +12,8 @@ import { settingUser } from "../redux/Silce/userSlice";
 
 
 export default function Login() {
-  const api=`http://localhost:3001`
-  //const api=`https://agriproject-120l.onrender.com`
+  //const api=`http://localhost:3001`
+  const api=`https://agriproject-120l.onrender.com`
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { user, setUser } = useContext(UserContext);
