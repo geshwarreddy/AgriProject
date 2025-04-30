@@ -13,10 +13,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Enable CORS for all routes
-app.use(cors({
-  origin: 'http://localhost:3000', // Allow only the frontend URL
-  credentials: true, // Allow credentials
-}));
+app.use(cors());
 
 // Middleware to parse JSON and cookies
 app.use(express.json());
